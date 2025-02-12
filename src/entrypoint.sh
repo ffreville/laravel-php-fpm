@@ -60,4 +60,6 @@ else
     info "If you want to add a custom php.ini file, you add it in /var/www/html/conf/php/php.ini"
 fi
 
+nginx -g 'daemon off;'
+
 supervisord -c /etc/supervisor/supervisord.conf
