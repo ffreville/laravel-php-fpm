@@ -23,28 +23,6 @@ jobs:
         timeout-minutes: 2
 
       -
-        name: Build and push 8.3
-        uses: docker/build-push-action@v3
-        with:
-          file: "./src/docker/Dockerfile"
-          push: true
-          platforms: linux/amd64,linux/arm64
-          build-args: |
-            phpVersion=8.3
-          tags: |
-           "ghcr.io/ffreville/laravel-php-fpm:8.3"
-      -
-        name: Build and push 8.3 alpine
-        uses: docker/build-push-action@v3
-        with:
-          file: "./src/docker/Dockerfile.alpine"
-          push: true
-          platforms: linux/amd64,linux/arm64
-          build-args: |
-            phpVersion=8.3
-          tags: |
-           "ghcr.io/ffreville/laravel-php-fpm:8.3-alpine"
-      -
        name: Build and push 8.4 alpine
        uses: docker/build-push-action@v3
        with:
